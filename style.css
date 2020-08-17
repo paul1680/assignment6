@@ -6,7 +6,22 @@ body{
     background-size: 100%;
     background-position: top;
 }
-
+#view{
+    display: none;
+}
+.lview{
+    display: none;
+}
+.searchResult{
+    text-align: center;
+    
+}
+.searchResult p:hover{
+  color: aqua;
+}
+ul{
+    list-style: none;
+}
 .form-control{
     background-color:rgba(255, 255, 255, 0.2);
     padding: 22px;

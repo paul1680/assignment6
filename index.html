@@ -92,6 +92,8 @@
                         <h3 id="lyric1" class="lyrics-name">Purple Noon</h3>
                         <h5 id="album1"></h5>
                         <p class="author lead">Album by <span id="band1">Washed Out</span></p>
+                        <br>
+                        <p id="duration1"></p>
                     </div>
                     <div class="col-md-3 text-md-right text-center">
                         <button class="btn btn-success">Get Lyrics</button>
@@ -106,6 +108,8 @@
                         <h3 id="lyric2" class="lyrics-name">Purple Noon</h3>
                         <h5 id="album2"></h5>
                         <p class="author lead">Album by <span id="band2">Washed Out</span></p>
+                        <br>
+                        <p id="duration2"></p>
                     </div>
                     <div class="col-md-3 text-md-right text-center">
                         <button class="btn btn-success">Get Lyrics</button>
@@ -119,6 +123,8 @@
                         <h3 id="lyric3" class="lyrics-name">Purple Noon</h3>
                         <h5 id="album3"></h5>
                         <p class="author lead">Album by <span id="band3">Washed Out</span></p>
+                        <br>
+                        <p id="duration3"></p>
                     </div>
                     <div class="col-md-3 text-md-right text-center">
                         <button class="btn btn-success">Get Lyrics</button>
@@ -131,6 +137,8 @@
                         <h3 id="lyric4" class="lyrics-name">Purple Noon</h3>
                         <h5 id="album4"></h5>
                         <p class="author lead">Album by <span id="band4">Washed Out</span></p>
+                        <br>
+                        <p id="duration4"></p>
                     </div>
                     <div class="col-md-3 text-md-right text-center">
                         <button class="btn btn-success">Get Lyrics</button>
@@ -200,18 +208,38 @@
                 document.getElementById('lyric1').innerText = data.data[0].title;
                 document.getElementById('album1').innerText = ' '+ data.data[0].album.title;
                 document.getElementById('band1').innerText = data.data[0].artist.name;
+                const time = data.data[0].duration;
+                const t0 = parseFloat(time);
+                const t1 = t0/60;
+                const t2 = t1.toFixed(2);
+                document.getElementById('duration1').innerText ='Duration: ' + t2 +'m';
 
                 document.getElementById('lyric2').innerText = data.data[1].title;
                 document.getElementById('album2').innerText = ' '+ data.data[1].album.title;
                 document.getElementById('band2').innerText = data.data[1].artist.name;
+                const time1 = data.data[1].duration;
+                const t10 = parseFloat(time1);
+                const t11 = t10/60;
+                const t12 = t11.toFixed(2);
+                document.getElementById('duration2').innerText ='Duration: ' + t12 +'m';
 
                 document.getElementById('lyric3').innerText = data.data[2].title;
                 document.getElementById('album3').innerText = ' '+ data.data[2].album.title;
                 document.getElementById('band3').innerText = data.data[2].artist.name;
+                const time2 = data.data[2].duration;
+                const t20 = parseFloat(time2);
+                const t21 = t20/60;
+                const t22 = t21.toFixed(2);
+                document.getElementById('duration3').innerText ='Duration: ' + t22 +'m';
 
                 document.getElementById('lyric4').innerText = data.data[3].title;
                 document.getElementById('album4').innerText = ' '+ data.data[3].album.title;
                 document.getElementById('band4').innerText = data.data[3].artist.name;
+                const time3 = data.data[3].duration;
+                const t30 = parseFloat(time3);
+                const t31 = t30/60;
+                const t32 = t31.toFixed(2);
+                document.getElementById('duration4').innerText ='Duration: ' + t32 +'m';
 
 
             })

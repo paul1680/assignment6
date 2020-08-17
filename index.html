@@ -71,7 +71,7 @@
             <!-- Single Lyrics -->
             <div class="single-lyrics text-center">
                 
-                <button class="btn go-back">&lsaquo;</button>
+                <button id="back" class="btn btn-success">Go back</button>
                 <h2 class="text-success mb-4"><span id="top-title"></span></h2>
                 <pre class="lyric text-white">
                 <p id="tLyric"></p>
@@ -104,8 +104,9 @@
                 </div>
                 <!-- ./ single result -->
                 <!-- single result -->
+
                 <div class="single-result row align-items-center my-3 p-3">
-                    <div class="col-md-9">
+                    <div id="footer" class="col-md-9">
                         <h3 class="lyrics-name">Purple Noon</h3>
                         <p class="author lead">Album by <span>Washed Out</span></p>
                     </div>
@@ -136,6 +137,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <!-- Custom Script Here -->
+
     <script>
         
         const search = document.getElementById('search')
@@ -178,6 +182,9 @@
                 document.getElementById('ten').innerText = data.data[9].album.title;
                 document.getElementById('aten').innerText = data.data[9].artist.name;
                 document.getElementById('view').style.display = 'block';
+                document.getElementById('back').style.display = 'block';
+
+                //document.getElementById('footer').innerHTML = 
             })
             
          
@@ -417,10 +424,18 @@
              })
         })
     })
+    
+//back button
+
+    const back = document.getElementById('back');
+    back.addEventListener('click',function(){
+        document.getElementById('view').style.display = 'none';
+        document.getElementById('back').style.display = 'none';
+        document.getElementById('songName').value = '';
+    })
 
     </script>
 
-    <!-- Custom Script Here -->
 
 </body>
 

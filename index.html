@@ -74,7 +74,7 @@
                 <button class="btn btn-secondary">Go back</button>
             </div>
             </div>
-            <div>
+            <div id="lyricView">
                 <h2 class="text-success mb-4"><span id="top-title"></span></h2>
                 <pre class="lyric text-white">
                 <p id="tLyric"></p>
@@ -462,6 +462,8 @@
         document.getElementById('back').style.display = 'none';
 
         document.getElementById('foot').style.display = 'none';
+        document.getElementById('lyricView').style.display = 'none';
+
 
 
         document.getElementById('songName').value = '';

@@ -12,6 +12,10 @@ body{
 #back{
     display: none;
 }
+#foot{
+    display: none;
+}
+
 .searchResult{
     text-align: center;
     
@@ -32,6 +36,7 @@ ul{
     border-radius: 1.5rem;
     padding: 9px 20px;
 }
+
 
 .btn-privious{
     background: rgba(255, 255, 255, 0.2);

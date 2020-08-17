@@ -54,6 +54,7 @@
             <div class="d-flex justify-content-center">
                 <div class="searchResult">
                     <div id="view">
+                        
 
                     <p class="author lead"><span id="t1"></span><span id="one"><strong> Purple Noon</strong></span> Album by <span id="aone">Washed Out</span> <button id="getLyrics1" class="btn btn-success">Get Lyrics</button></p>
                     <p class="author lead"><span id="t2"></span><span id="two"><strong>Purple Noon</strong></span> Album by <span id="atwo">Washed Out</span> <button id="getLyrics2"  class="btn btn-success">Get Lyrics</button></p>
@@ -210,36 +211,36 @@
                 document.getElementById('band1').innerText = data.data[0].artist.name;
                 const time = data.data[0].duration;
                 const t0 = parseFloat(time);
-                const t1 = t0/60;
-                const t2 = t1.toFixed(2);
-                document.getElementById('duration1').innerText ='Duration: ' + t2 +'m';
+                const t1 = Math.floor(t0/60);
+                const t2 = t0%60;
+                document.getElementById('duration1').innerText ='Duration: ' + t1 +'m'+' '+t2+ 's';
 
                 document.getElementById('lyric2').innerText = data.data[1].title;
                 document.getElementById('album2').innerText = ' '+ data.data[1].album.title;
                 document.getElementById('band2').innerText = data.data[1].artist.name;
                 const time1 = data.data[1].duration;
                 const t10 = parseFloat(time1);
-                const t11 = t10/60;
-                const t12 = t11.toFixed(2);
-                document.getElementById('duration2').innerText ='Duration: ' + t12 +'m';
+                const t11 = Math.floor(t10/60);
+                const t12 = t10%60;
+                document.getElementById('duration2').innerText ='Duration: ' + t11 +'m'+' '+t12+ 's';
 
                 document.getElementById('lyric3').innerText = data.data[2].title;
                 document.getElementById('album3').innerText = ' '+ data.data[2].album.title;
                 document.getElementById('band3').innerText = data.data[2].artist.name;
                 const time2 = data.data[2].duration;
                 const t20 = parseFloat(time2);
-                const t21 = t20/60;
-                const t22 = t21.toFixed(2);
-                document.getElementById('duration3').innerText ='Duration: ' + t22 +'m';
+                const t21 = Math.floor(t20/60);
+                const t22 = t20%60;
+                document.getElementById('duration3').innerText ='Duration: ' + t21 +'m'+' '+t22+ 's';
 
                 document.getElementById('lyric4').innerText = data.data[3].title;
                 document.getElementById('album4').innerText = ' '+ data.data[3].album.title;
                 document.getElementById('band4').innerText = data.data[3].artist.name;
                 const time3 = data.data[3].duration;
                 const t30 = parseFloat(time3);
-                const t31 = t30/60;
-                const t32 = t31.toFixed(2);
-                document.getElementById('duration4').innerText ='Duration: ' + t32 +'m';
+                const t31 = Math.floor(t30/60);
+                const t32 = t30%60;
+                document.getElementById('duration4').innerText ='Duration: ' + t31 +'m'+' '+t32+ 's';
 
 
             })
